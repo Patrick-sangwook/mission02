@@ -43,7 +43,7 @@ game.add_quiz(
     )
 )
 
-wwhile True:
+while True:
     print("\n===== 포켓몬 퀴즈 =====")
     print("1. 퀴즈 풀기")
     print("2. 최고 점수 보기")
@@ -53,6 +53,7 @@ wwhile True:
         menu = int(input("번호를 입력하세요 : "))
 
         if menu == 1:
+            print("\n퀴즈를 시작합니다!\n")
             game.start_quiz()
 
         elif menu == 2:
