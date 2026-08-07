@@ -8,3 +8,32 @@
 
 2. python 활용
  - 
+
+
+ # Pokemon Quiz Game
+
+## 프로젝트 소개
+
+Python 객체지향(OOP)을 이용하여 만든 포켓몬 퀴즈 게임입니다.
+
+## 기능
+
+- 객관식 퀴즈
+- 점수 계산
+- 최고 점수 저장(state.json)
+- 최고 점수 불러오기
+- 메뉴 기능
+
+## 실행 방법
+
+```bash
+python main.py
+```
+
+## 사용 기술
+
+- Python
+- Class
+- Object
+- JSON
+- Exception Handling
