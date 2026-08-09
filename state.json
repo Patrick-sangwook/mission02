@@ -1,3 +1,15 @@
 {
-    "best_score": 2
+    "best_score": 3,
+    "custom_quizzes": [
+        {
+            "question": "새로운  추가되는 내용",
+            "choices": [
+                "답2",
+                "답3",
+                "답4",
+                "답5"
+            ],
+            "answer": 1
+        }
+    ]
 }
