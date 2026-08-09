@@ -3,10 +3,10 @@
 << 환경 구축 >>
  - GitHub에서 mission02 repository 생성
  - git clone https://github.com/Patrick-sangwook/mission02.git //내 컴퓨터로 내려받기
-  * 갓대희's 작은 공간 / codex, codex CLI / Superpowers 참고 예정
+  * 갓대희's 작은 공간 / codex, codex CLI / Superpowers 참고
 
 
-## 1. 🎮 Pokemon Quiz Game 프로젝트 개요
+## 1. Pokemon Quiz Game 프로젝트 개요
 
 객체지향 프로그래밍(OOP)을 활용하여 제작한 Python 콘솔 기반의 포켓몬 퀴즈 게임
 사용자는 퀴즈를 풀고, 새로운 퀴즈를 직접 추가할 수 있으며,
@@ -128,10 +128,10 @@ mission02
 ## 10. 프로젝트 결과
 
 구현 완료 기능
-- ✅ 퀴즈 풀기
-- ✅ 퀴즈 추가
-- ✅ 퀴즈 목록
-- ✅ 점수 확인
-- ✅ 최고 점수 저장
-- ✅ JSON 파일 저장 및 불러오기
-- ✅ 프로그램 재실행 후 데이터 유지
+-  퀴즈 풀기
+-  퀴즈 추가
+-  퀴즈 목록
+-  점수 확인
+-  최고 점수 저장
+-  JSON 파일 저장 및 불러오기
+-  프로그램 재실행 후 데이터 유지
