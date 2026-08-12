@@ -1,4 +1,4 @@
-# mission02 두번째 미션
+# 두번째(mission02) 미션
 
 << 환경 구축 >>
  - GitHub에서 mission02 repository 생성
@@ -6,7 +6,7 @@
 
 
 ## 1. Pokemon Quiz Game 프로젝트 개요
-객체지향 프로그래밍(OOP)을 활용하여 제작한 Python 콘솔 기반의 포켓몬 퀴즈 게임 /
+객체지향 프로그래밍(OOP)을 활용하여 제작한 Python 콘솔 기반의 포켓몬 퀴즈 게임
 사용자는 퀴즈를 풀고, 새로운 퀴즈를 직접 추가할 수 있으며,
 프로그램을 종료한 후 다시 실행해도 추가한 퀴즈와 최고 점수가 `state.json` 파일에 저장되어 그대로 유지되도록 구현
 
@@ -15,7 +15,7 @@
 기본적으로 포켓몬의 타입, 특징 등을 문제로 구성하였으며, 사용자가 원하는 포켓몬 문제를 직접 추가할 수도 있도록 구현
 
 ## 3. 실행 방법
-   - 저장소 이동 : cd mission02
+   - 저장소 이동 : cd mission02 (/Users/netlee122690/Desktop/mission02)
    - 프로그램 실행 : python3 main.py
 
 ## 4. 기능 목록
@@ -44,7 +44,7 @@
 
 ## 5. 파일 구조
 
-```text
+```
 mission02
 ├── main.py          # 프로그램 시작
 ├── quiz.py          # Quiz 클래스
@@ -55,7 +55,7 @@ mission02
 
 ## 6. 데이터 파일 설명 (state.json)
 프로그램에서 사용하는 데이터는 프로젝트 루트의 `state.json` 파일에 UTF-8 형식으로 저장
-저장되는 내용은 다음과 같습니다.
+저장되는 내용은 다음과 같음
 - 최고 점수(best_score)
 - 사용자가 추가한 퀴즈(custom_quizzes)
 
@@ -79,17 +79,13 @@ mission02
 ```
 
 ## 7. 사용한 클래스
- Quiz 클래스
-퀴즈 한 문제를 관리하는 클래스입니다.
-
+ Quiz 클래스 : 퀴즈 한 문제를 관리하는 클래스
 메서드
 - `show()`
 - `check_answer()`
 - `to_dict()`
 
- QuizGame 클래스
-게임 전체를 관리하는 클래스입니다.
-
+ QuizGame 클래스 : 게임 전체를 관리하는 클래스
 메서드
 - `start_quiz()`
 - `add_quiz()`
@@ -124,4 +120,4 @@ mission02
 -  JSON 파일 저장 및 불러오기
 -  프로그램 재실행 후 데이터 유지
 
-* 향후 참고내용 : * 갓대희's 작은 공간 내용 체크 / codex, codex CLI & Superpowers 활용 방안 마련
+* 향후 참고내용 : 갓대희's 작은 공간 내용 체크 / codex, codex CLI & Superpowers 활용 방안 마련
