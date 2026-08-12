@@ -59,6 +59,7 @@ mission02
 - 최고 점수(best_score)
 - 사용자가 추가한 퀴즈(custom_quizzes)
 
+```
 (예시)
 {
     "best_score": 3,
@@ -75,6 +76,7 @@ mission02
         }
     ]
 }
+```
 
 ## 7. 사용한 클래스
  Quiz 클래스
