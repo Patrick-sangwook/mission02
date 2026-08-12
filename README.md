@@ -51,6 +51,7 @@ mission02
 ├── quiz_game.py     # QuizGame 클래스
 ├── state.json       # 최고 점수 및 추가 퀴즈 저장
 └── README.md
+```text
 
 ## 6. 데이터 파일 설명 (state.json)
 프로그램에서 사용하는 데이터는 프로젝트 루트의 `state.json` 파일에 UTF-8 형식으로 저장
