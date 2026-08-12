@@ -1,5 +1,4 @@
 # 두번째(mission02) 미션
-
 << 환경 구축 >>
  - GitHub에서 mission02 repository 생성
  - git clone https://github.com/Patrick-sangwook/mission02.git //내 컴퓨터로 내려받기
@@ -42,7 +41,8 @@
  ⑤ 종료
 - 프로그램 종료
 
-## 5. 파일 구조
+## 5. 파일 구조 및 각 파일의 관계
+Quiz 클래스는 퀴즈 한 문제, QuizGame 클래스는 퀴즈 게임 전체, main.py는 프로그램의 시작과 메뉴 선택을 담당하도록 역할을 나누어 구성
 
 ```
 mission02
@@ -51,6 +51,19 @@ mission02
 ├── quiz_game.py     # QuizGame 클래스
 ├── state.json       # 최고 점수 및 추가 퀴즈 저장
 └── README.md
+
+
+main.py
+   │
+   ├── Quiz 객체 생성 ──────────────→ quiz.py
+   │
+   └── QuizGame 객체 생성 ─────────→ quiz_game.py
+                                      │
+                                      ├── 여러 Quiz 객체 관리
+                                      ├── 퀴즈 실행
+                                      ├── 점수 관리
+                                      └── state.json 저장/불러오기
+
 ```
 
 ## 6. 데이터 파일 설명 (state.json)
@@ -78,21 +91,42 @@ mission02
 }
 ```
 
-## 7. 사용한 클래스
- Quiz 클래스 : 퀴즈 한 문제를 관리하는 클래스
-메서드
-- `show()`
-- `check_answer()`
-- `to_dict()`
+## 7. 메인파일 수행 내용 및 클래스(메서드) 설명
+@ main.py - 메인 프로그램 
+ 프로그램의 시작점으로 기본 퀴즈를 생성하고 QuizGame 객체를 만든 후 사용자가 원하는 기능을 선택할 수 있도록 메인 메뉴를 실행합니다.
+- 주요 수행 내용
+Quiz 클래스를 이용하여 기본 포켓몬 퀴즈 5개를 생성합니다.
+기본 퀴즈를 이용하여 QuizGame 객체인 game을 생성합니다.
+사용자에게 메인 메뉴를 반복해서 보여줍니다.
+메뉴에서 1. 퀴즈 풀기를 선택하면 game.start_quiz()를 실행합니다.
+메뉴에서 2. 퀴즈 추가를 선택하면 문제, 선택지, 정답을 입력받아 새로운 Quiz 객체를 생성하고 game.add_quiz()를 이용하여 추가합니다.
+메뉴에서 3. 퀴즈 목록을 선택하면 game.show_quizzes()를 실행합니다.
+메뉴에서 4. 점수 확인을 선택하면 game.show_score()를 실행합니다.
+메뉴에서 5. 종료를 선택하면 반복문을 종료하고 프로그램을 끝냅니다.
+잘못된 문자나 숫자가 입력되었을 때 try / except를 이용하여 오류가 발생하지 않도록 예외 처리합니다.
 
- QuizGame 클래스 : 게임 전체를 관리하는 클래스
+ @ Quiz 클래스 : 퀴즈 한 문제를 관리하는 클래스 메서드
+  퀴즈 한 문제를 관리하는 클래스
+  하나의 Quiz 객체에는 문제(question), 선택지(choices), 정답(answer) 정보가 저장
+
 메서드
-- `start_quiz()`
-- `add_quiz()`
-- `show_quizzes()`
-- `show_score()`
-- `save_data()`
-- `load_data()`
+__init__(question, choices, answer) : 새로운 Quiz 객체를 만들 때 문제, 선택지, 정답을 초기값으로 저장
+show() : 퀴즈의 문제와 선택지를 화면에 출력
+check_answer(user_answer) : 사용자가 입력한 답과 실제 정답을 비교하여 정답 여부를 확인
+to_dict() : Quiz 객체의 문제, 선택지, 정답을 딕셔너리 형태로 변환하여 JSON 파일에 저장할 수 있도록 함
+
+ @QuizGame 클래스 : 게임 전체를 관리하는 클래스 메서드
+  여러 개의 퀴즈와 점수를 관리하고 게임 전체의 기능을 담당하는 클래스
+  QuizGame 객체는 기본 퀴즈, 사용자가 추가한 퀴즈, 현재 점수, 최고 점수 등의 정보를 관리
+
+메서드
+__init__(default_quizzes) : QuizGame 객체를 생성하고 기본 퀴즈, 점수 등의 초기값을 설정한 후 기존 저장 데이터를 불러옴
+start_quiz() : 등록된 퀴즈를 순서대로 출제하고 사용자의 정답을 확인하여 점수를 계산
+add_quiz(quiz) : 사용자가 새로 만든 Quiz 객체를 퀴즈 목록에 추가하고 데이터를 저장
+show_quizzes() : 현재 등록되어 있는 전체 퀴즈의 개수와 문제 목록을 화면에 출력
+show_score() : 사용자의 최근 점수와 최고 점수를 화면에 출력
+save_data() : 최고 점수와 사용자가 추가한 퀴즈를 state.json 파일에 저장
+load_data() : 프로그램 시작 시 state.json 파일을 읽어 기존 최고 점수와 사용자가 추가한 퀴즈를 복원
 
 ## 8. 구현한 객체지향 개념
 본 프로젝트에서는 다음과 같은 객체지향 개념을 사용
