@@ -156,4 +156,4 @@ load_data() : 프로그램 시작 시 state.json 파일을 읽어 기존 최고 
 -  JSON 파일 저장 및 불러오기
 -  프로그램 재실행 후 데이터 유지
 
-* 향후 참고내용 : 갓대희's 작은 공간 내용 체크 / codex, codex CLI & Superpowers 활용 방안 마련
+* 향후 참고내용 : 갓대희's 작은 공간 내용 체크 / codex, codex CLI & Superpowers 활용 방안 검토
